@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+   
+</body>
+<script>
+// 1.Write a function calculateArea that takes the length and width of a rectangle as parameters and returns its area.
+    function calculateArea(a,b){
+        return a*b;
+    }
+    console.log(calculateArea(5,4))
+
+// 2.Create a function checkValue that takes a parameter and checks if it's null, undefined, or a valid value.
+    function checkValue(value) {
+    if (value === null) {
+        return "Value is null.";
+    } else if (value === undefined) {
+        return "Value is undefined.";
+    } else {
+        return "Value is valid.";
+    }
+}
+
+    console.log(checkValue(null));   
+// 3.Write a function generateEmail that takes a name and domain as parameters and generates an email address using template literals.
+function generateEmail(name,domain){
+
+    return name+'.'+domain;
+}    
+console.log(generateEmail("John Doe", "example.com") )
+
+// 4.Type Checker Function: Write a function checkType that takes a parameter and checks its type, including array, object, null, and undefined.
+function checkType(value) {
+    if (value === null) {
+        console.log("Type: Null");
+    } else if (value === undefined) {
+        console.log("Type: Undefined");
+    } else if (Array.isArray(value)) {
+        console.log("Type: Array");
+    } else {
+        console.log("Type: " + typeof value);
+    }
+}
+
+    checkType([1, 2, 3]);  
+// 5.Implement a function composeMessage that takes multiple parameters and uses template literals to compose a message with different expressions.
+function composeMessage(name, year, city){
+    console.log(`Hello ${name},you are ${year} years old and live in ${city}.`)
+}
+composeMessage("John", 25, "New York")            
+
+
+
+</script>
+</html>
