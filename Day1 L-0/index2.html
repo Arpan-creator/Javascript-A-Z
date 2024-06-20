@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1.Declare a function printName that takes a name parameter and prints the value of the name parameter.
+    function printName(name){
+        console.log(name)
+    }
+    printName("John");
+    // 2.Declare a function printDynamicType that takes a value parameter and prints the type of the value parameter.
+    function printDynamicType(val){
+        return typeof val
+    }
+    console.log(printDynamicType(10))
+    console.log(printDynamicType("Hello"))
+    // 3. Declare a function printDataType that takes a value parameter and prints its data type.
+    function printDataType(val){
+        console.log(typeof val)
+    }
+    printDataType("Hello"); 
+    printDataType(10); 
+    printDataType(true); 
+    printDataType([1, 2, 3]); 
+    printDataType({ key: "value" }); 
+    printDataType(null); 
+    printDataType(undefined); 
+
+    // 4. Declare a function printNullableType that takes a value parameter. If the value is null, it should print "null". If the value is undefined, it should print "undefined". Otherwise, it should print the type of the value.
+    function printNullableType(value) {
+    if (value === null) {
+        console.log("null");
+    } else if (value === undefined) {
+        console.log("undefined");
+    } else {
+        console.log(typeof value);
+    }
+}
+    printNullableType(null); 
+    printNullableType(undefined); 
+    printNullableType("Hello"); 
+    printNullableType(10); 
+
+    // 5.Declare a function checkTruthy that takes a value parameter and checks if it's truthy or falsey. Print the result.
+    function checkTruthy(val){
+        if (val){
+            console.log(true)
+        }
+        else{
+            console.log(false)
+        }
+    }
+    checkTruthy(""); 
+    checkTruthy(0); 
+    checkTruthy(null); 
+    checkTruthy(undefined); 
+    checkTruthy("Hello"); 
+    checkTruthy(10); 
+    checkTruthy({}); 
+
+    // 6. Declare a function generateMessage that takes name, age, and language parameters and generates a message using template literals. 
+    function generateMessage(name, year, sub){
+        console.log(`My name is ${name}, I am ${year} years old, and my favorite programming language is ${sub}.`)
+    }
+    generateMessage("John", 25, "JavaScript");
+
+
+
+
+</script>
+</html>
