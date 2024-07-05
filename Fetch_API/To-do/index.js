@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const API_URL = 'https://jsonplaceholder.typicode.com/todos';
-    const todoList = document.getElementById('todo-list');
+    const todoList = document.getElementById('todo_list');
   
     async function fetchTodos() {
       try {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const todos = await response.json();
         addToDOM(todos);
       } catch (error) {
-        console.error('Error fetching todos:', error);
+        console.error( error);
       }
     }
   
