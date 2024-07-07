@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "password": "password123",
+      "accessToken": "mocked-access-token"
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Read a book",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Exercise",
+      "completed": false
+    }
+  ]
+}

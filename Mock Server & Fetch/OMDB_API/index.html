@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB Movie Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .movie {
+            border: 1px solid gold;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .movie img {
+            margin-right: 10px;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>OMDB Movie Search</h2>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Enter movie title" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    <div class="pagination" id="pagination"></div>
+    <div id="error-msg" class="error"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
