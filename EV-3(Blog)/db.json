@@ -1,0 +1,20 @@
+{
+  "posts": [],
+  "comments": [],
+  "users": [
+    {
+      "id": "0.5850871849007118",
+      "username": "Arpan Kundu",
+      "userEmail": "www.arpan.01@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "0.38568891277095974",
+      "username": "Arpan ",
+      "userEmail": "www.arpan.01@gmail.com",
+      "password": "123"
+    }
+  ],
+  "reactions": [],
+  "password": []
+}
