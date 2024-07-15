@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 60%;
+            height:400px;
+            margin:auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: burlywood;
+            padding: 50px;
+            border-radius: 20px;
+
+        }
+        form>input:nth-child(4):active{
+            background-color: cadetblue;
+            color: whitesmoke;
+            font-weight: 600;
+        }
+        form>input{
+            padding: 10px;
+            border-radius: 20px;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="username" placeholder="username">
+        <input type="email" id="userEmail" placeholder="email">
+        <input type="text" id="password" placeholder="password">
+        <input type="submit">
+    </form>
+</body>
+ <script>
+    let form =document.querySelector("form")
+    const handleForm =(e)=>{
+        e.preventDefault()
+
+        let username= document.getElementById('username').value 
+        let userEmail=document.getElementById("userEmail").value
+        let password= document.getElementById('password').value 
+
+        let obj={
+            id:Math.random().toString(),
+            username,
+            userEmail,
+            password
+        }
+        
+        fetch("http://localhost:3000/users")
+        .then((res)=>res.json())
+        .then((res)=>{
+            let narr=res.filter((ele)=>{
+                return ele.username==username
+            })
+        
+
+        if (narr.length==0){
+            fetch(`http://localhost:3000/users`,{
+                method:"POST",
+                headers:{
+                    "Content-type": "application/json"
+                },
+                body : JSON.stringify(obj)
+            }).then((res)=>{
+                window.location.href="login.html"
+            })
+        }
+        else{
+            alert("Username Already Exists")
+            
+        }
+     })
+    }
+
+    form.addEventListener('submit',(event)=>handleForm(event))
+ </script>
+</html>
